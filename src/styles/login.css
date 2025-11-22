@@ -1,0 +1,64 @@
+/* layout */
+.screen {
+  min-height: 100vh; position: relative; overflow: hidden;
+  display: grid; place-items: center; padding: 24px;
+}
+.grid {
+  width: min(1100px, 100%);
+  display: grid; gap: 28px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 880px) {
+  .grid { grid-template-columns: 1.1fr .9fr; align-items: center; }
+}
+
+/* brand column */
+.brand { display: grid; gap: 16px; justify-items: center; text-align: center; }
+@media (min-width: 880px) {
+  .brand { justify-items: start; text-align: left; }
+}
+.brand__logo {
+  width: 104px; height: 104px; border-radius: 50%; background: #fff;
+  display: grid; place-items: center; box-shadow: 0 8px 30px rgba(255,255,255,.15), inset 0 0 0 1px rgba(255,255,255,.4);
+}
+.brand__title { font-size: clamp(34px, 6vw, 56px); font-weight: 700; line-height: 1.1; margin: 0; }
+.brand__accent { color: var(--accent); }
+.brand__tag { color: var(--muted-2); max-width: 520px; }
+.brand__badges { display: flex; gap: 8px; flex-wrap: wrap; opacity: .9; }
+.brand__badges > span {
+  font-size: 12px; color: var(--muted-2);
+  border: 1px solid var(--white-10); padding: 6px 10px; border-radius: 999px;
+  background: rgba(255,255,255,.04);
+}
+
+/* login card */
+.card {
+  position: relative;
+  background: rgba(255,255,255,.05);
+  border: 1px solid var(--white-10);
+  backdrop-filter: blur(14px);
+  border-radius: 18px; padding: 22px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+}
+.card__title { margin: 4px 0 2px; font-size: 20px; font-weight: 700; }
+.card__sub { margin: 0 0 18px; color: var(--muted); font-size: 13px; }
+.form { display: grid; gap: 12px; }
+.legal { margin-top: 6px; text-align: center; color: var(--muted); font-size: 11px; }
+
+/* floating background effects */
+.fx { position: absolute; inset: 0; pointer-events: none; }
+.fx__blob {
+  position: absolute; filter: blur(52px); opacity: .4; border-radius: 999px;
+}
+.fx__blob--pink { width: 360px; height: 360px; left: -80px; top: -80px; background: color-mix(in srgb, var(--accent) 60%, transparent); }
+.fx__blob--amber { width: 380px; height: 380px; right: -120px; bottom: -80px; background: color-mix(in srgb, var(--accent-2) 45%, transparent); }
+
+.cube {
+  position: absolute; width: 14px; height: 14px; background: rgba(255,255,255,.09);
+  transform: rotate(45deg); box-shadow: 0 0 20px rgba(225,29,112,.25);
+  animation: float 6s ease-in-out infinite;
+}
+.cube--1 { left: 8%; top: 34%; animation-duration: 6s; }
+.cube--2 { left: 18%; top: 62%; animation-duration: 7s; }
+.cube--3 { right: 12%; top: 26%; animation-duration: 5.5s; }
+@keyframes float { 0%,100% { transform: translateY(0) rotate(45deg); } 50% { transform: translateY(-12px) rotate(45deg); } }

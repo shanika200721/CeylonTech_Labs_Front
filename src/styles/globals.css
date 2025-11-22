@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* utilities */
+.w-full { width: 100%; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px; padding: 12px 16px; font-weight: 600; font-size: 14px;
+  border: 1px solid transparent; cursor: pointer; transition: 150ms ease;
+  outline: none;
+}
+.btn--solid {
+  color: #fff;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 24px rgba(225,29,112,.25);
+}
+.btn--solid:hover { filter: brightness(0.98); }
+.btn--outline {
+  color: var(--text);
+  border-color: var(--white-15);
+  background: transparent;
+}
+.btn--outline:hover { background: rgba(255,255,255,.05); }
+
+/* spinner */
+.spinner {
+  width: 16px; height: 16px; margin-right: 8px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.25);
+  border-top-color: #fff; animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* fields */
+.field { display: block; }
+.field + .field { margin-top: 14px; }
+.field__label { display: block; color: var(--muted-2); font-size: 12px; margin-bottom: 6px; letter-spacing: .02em; }
+.field__input {
+  width: 100%; color: #fff; background: #0F1115; border: 1px solid var(--white-10);
+  padding: 12px 14px; border-radius: 12px; outline: none; font-size: 14px;
+}
+.field__input::placeholder { color: #6D7280; }
+.field__input:focus { border-color: transparent; box-shadow: 0 0 0 3px var(--ring); }
+.field__password { position: relative; }
+.field__toggle {
+  position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 12px;
+}
+.field__toggle:hover { color: #fff; }
+
+/* alert */
+.alert {
+  margin: 8px 0; font-size: 12px; color: #fca5a5;
+  background: rgba(127,29,29,.15); border: 1px solid rgba(127,29,29,.3);
+  padding: 8px 10px; border-radius: 8px;
+}
+
+/* divider */
+.sep { position: relative; margin: 12px 0; text-align: center; }
+.sep::before { content: ""; position: absolute; left: 0; right: 0; top: 50%;
+  border-top: 1px solid var(--white-10); }
+.sep span { position: relative; background: var(--bg); padding: 0 8px; color: var(--muted); font-size: 12px; }
+
+/* Google icon */
+.gicon { width: 16px; height: 16px; margin-right: 8px; }
+
+@keyframes pulse-strip {
+  0% {
+    background-position: 0% 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0% 0;
+  }
+}
+.pulse {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.1) 75%);
+  background-size: 200% 100%;
+  animation: pulse-strip 1.5s infinite;
+}
