@@ -58,6 +58,43 @@
   transform: rotate(45deg); box-shadow: 0 0 20px rgba(225,29,112,.25);
   animation: float 6s ease-in-out infinite;
 }
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Ensure Google button container has proper sizing */
+.gsi-material-button {
+  width: 100% !important;
+  max-width: 360px;
+}
+
+/* Loading overlay */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+
 .cube--1 { left: 8%; top: 34%; animation-duration: 6s; }
 .cube--2 { left: 18%; top: 62%; animation-duration: 7s; }
 .cube--3 { right: 12%; top: 26%; animation-duration: 5.5s; }

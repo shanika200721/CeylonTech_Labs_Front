@@ -5,7 +5,8 @@ import Input from "../components/Input.jsx";
 import { uploadFile } from "../api/client.js";
 import MarkdownEditor from "../components/MarkdownEditor.jsx";
 
-const API = import.meta.env.VITE_API_BASE;
+const API = import.meta.env.VITE_API_BASE ?? "http://localhost:4000";
+
 
 export default function Posts() {
   const [items, setItems] = useState([]);
