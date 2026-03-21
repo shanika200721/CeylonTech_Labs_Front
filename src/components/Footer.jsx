@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
           <div style={{ fontSize: 13, color: "var(--muted-2)" }}>
             <div>ceylontechlabs@gmail.com</div>
-            <div style={{ marginTop: 4 }}>WhatsApp: +94 XX XXX XXXX</div>
+            <div style={{ marginTop: 4 }}>WhatsApp: +94 70 558 4634</div>
             <Link
               to="/contact"
               style={{

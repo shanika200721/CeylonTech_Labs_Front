@@ -62,7 +62,11 @@ export default function App() {
           <Route path="/forgot" element={<RequestReset />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/services" element={<Services />} />
+
+          {/*
           <Route path="/pricing" element={<Pricing />} />
+          */}
+          
           <Route path="/about" element={<About />} />
 
           

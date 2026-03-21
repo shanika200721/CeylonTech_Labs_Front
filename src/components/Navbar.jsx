@@ -33,21 +33,17 @@ export default function Navbar() {
             textDecoration: "none",
           }}
         >
-          <div
+          <img
+            src="/ceylontech.jpg"
+            alt="CeylonTech Labs"
             style={{
-              width: 30,
-              height: 30,
+              width: 36,
+              height: 36,
               borderRadius: 999,
-              background:
-                "radial-gradient(circle at 30% 0, #F97316, #E11D70 50%, #0B1120)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 16,
+              objectFit: "cover",
+              border: "1.5px solid rgba(255,255,255,0.15)",
             }}
-          >
-            <span style={{ fontWeight: 800 }}>C</span>
-          </div>
+          />
           <div style={{ lineHeight: 1 }}>
             <div style={{ fontWeight: 700, fontSize: 16 }}>CeylonTech Labs</div>
             <div style={{ fontSize: 11, color: "var(--muted)" }}>
@@ -67,7 +63,14 @@ export default function Navbar() {
         >
           <NavItem to="/portfolio" label="Portfolio" />
           <NavItem to="/services" label="Services" />
+
+          {/* 
+          
           <NavItem to="/pricing" label="Pricing" />
+          */}
+          
+
+
           <NavItem to="/blog" label="Blog" />
           <NavItem to="/contact" label="Contact" />
 
