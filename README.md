@@ -1,16 +1,127 @@
-# React + Vite
+Here are simplified, clean versions of the `README.md` files for your frontend and backend repositories. They contain just the essentials to get your projects running quickly.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 1. Frontend Repository `README.md`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```markdown
+# 🌐 CeylonTech Labs - Frontend Website
 
-## React Compiler
+The frontend web platform for **CeylonTech Labs**, built using modern web development standards.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
+* **Framework:** Next.js / React.js
+* **Styling:** Tailwind CSS
+* **Hosting:** Vercel
 
-## Expanding the ESLint configuration
+## 💻 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Configure Environment Variables
+Create a `.env.local` file in the root directory:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
+
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+
+```
+
+Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) in your browser.
+
+## 🧪 Available Scripts
+
+* 
+`npm run dev` - Starts the local development server.
+
+* 
+`npm run build` - Builds the application for production.
+
+* 
+`npm run start` - Runs the compiled production build locally.
+
+* 
+`npm run lint` - Checks code formatting and identifies errors.
+
+---
+
+📩 **Contact:** ceylontechlabs@gmail.com | Colombo, Sri Lanka 
+
+```
+
+---
+
+## 2. Backend Repository `README.md`
+
+```markdown
+# ⚙️ CeylonTech Labs - Backend API
+
+The core backend API engine servicing **CeylonTech Labs** contact forms and server integrations.
+
+## 🛠️ Tech Stack
+* **Runtime:** Node.js
+* **Framework:** Express.js
+* **Mailing:** Nodemailer (SMTP)
+
+## 💻 Getting Started
+
+### 1. Configure Environment Variables
+Create a `.env` file in the root directory:
+```env
+PORT=5000
+NODE_ENV=development
+FRONTEND_URL=http://localhost:3000
+
+# Email Setup
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=ceylontechlabs@gmail.com
+SMTP_PASS=your_secure_app_password
+
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+
+```
+
+### 3. Start Server
+
+```bash
+npm run dev
+
+```
+
+The server will run on port `5000` (`http://localhost:5000`).
+
+## 📁 Key Project Folders
+
+```text
+├── src/
+│   ├── controllers/     # Route logic handling
+│   ├── middleware/      # Security & validations
+│   ├── routes/          # API endpoints mapping
+│   └── app.js           # Express configuration
+└── server.js            # Entry point listener
+
+```
+
+---
+
+📩 **Contact:** ceylontechlabs@gmail.com | Colombo, Sri Lanka 
+
+```
+
+```
