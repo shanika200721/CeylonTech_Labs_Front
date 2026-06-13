@@ -2,35 +2,35 @@ Here are simplified, clean versions of the `README.md` files for your frontend a
 
 ---
 
-## 1. Frontend Repository `README.md`
+ 1. Frontend Repository `README.md`
 
 ```markdown
-# 🌐 CeylonTech Labs - Frontend Website
+🌐 CeylonTech Labs - Frontend Website
 
 The frontend web platform for **CeylonTech Labs**, built using modern web development standards.
 
-## 🛠️ Tech Stack
-* **Framework:** Next.js / React.js
-* **Styling:** Tailwind CSS
-* **Hosting:** Vercel
+🛠️ Tech Stack
+* Framework: Next.js / React.js
+* Styling: Tailwind CSS
+* Hosting: Vercel
 
-## 💻 Getting Started
+ 💻 Getting Started
 
-### 1. Configure Environment Variables
+ 1. Configure Environment Variables
 Create a `.env.local` file in the root directory:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
 
 ```
 
-### 2. Install Dependencies
+ 2. Install Dependencies
 
 ```bash
 npm install
 
 ```
 
-### 3. Run Development Server
+ 3. Run Development Server
 
 ```bash
 npm run dev
@@ -39,7 +39,7 @@ npm run dev
 
 Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000) in your browser.
 
-## 🧪 Available Scripts
+🧪 Available Scripts
 
 * 
 `npm run dev` - Starts the local development server.
@@ -55,34 +55,34 @@ Open [http://localhost:3000](https://www.google.com/search?q=http://localhost:30
 
 ---
 
-📩 **Contact:** ceylontechlabs@gmail.com | Colombo, Sri Lanka 
+📩 Contact: ceylontechlabs@gmail.com | Colombo, Sri Lanka 
 
 ```
 
 ---
 
-## 2. Backend Repository `README.md`
+ 2. Backend Repository `README.md`
 
 ```markdown
-# ⚙️ CeylonTech Labs - Backend API
+⚙️ CeylonTech Labs - Backend API
 
 The core backend API engine servicing **CeylonTech Labs** contact forms and server integrations.
 
-## 🛠️ Tech Stack
-* **Runtime:** Node.js
-* **Framework:** Express.js
-* **Mailing:** Nodemailer (SMTP)
+🛠️ Tech Stack
+* Runtime: Node.js
+* Framework: Express.js
+* Mailing: Nodemailer (SMTP)
 
-## 💻 Getting Started
+ 💻 Getting Started
 
-### 1. Configure Environment Variables
+ 1. Configure Environment Variables
 Create a `.env` file in the root directory:
 ```env
 PORT=5000
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 
-# Email Setup
+ Email Setup
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=ceylontechlabs@gmail.com
@@ -90,14 +90,14 @@ SMTP_PASS=your_secure_app_password
 
 ```
 
-### 2. Install Dependencies
+ 2. Install Dependencies
 
 ```bash
 npm install
 
 ```
 
-### 3. Start Server
+ 3. Start Server
 
 ```bash
 npm run dev
@@ -106,7 +106,7 @@ npm run dev
 
 The server will run on port `5000` (`http://localhost:5000`).
 
-## 📁 Key Project Folders
+ 📁 Key Project Folders
 
 ```text
 ├── src/
@@ -117,11 +117,9 @@ The server will run on port `5000` (`http://localhost:5000`).
 └── server.js            # Entry point listener
 
 ```
-
 ---
 
-📩 **Contact:** ceylontechlabs@gmail.com | Colombo, Sri Lanka 
+📩 Contact: ceylontechlabs@gmail.com | Colombo, Sri Lanka 
 
 ```
-
 ```
