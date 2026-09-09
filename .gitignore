@@ -1,4 +1,7 @@
 node_modules/
-.env
-*.log
+.vite/
 dist/
+.env
+.env.*
+!.env.example
+*.log
