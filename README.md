@@ -1,4 +1,5 @@
-Here are simplified, clean versions of the `README.md` files for your frontend and backend repositories. They contain just the essentials to get your projects running quickly.
+
+<img width="1536" height="1024" alt="ChatGPT Image Sep 16, 2026, 05_39_58 PM" src="https://github.com/user-attachments/assets/d87754ce-e0bd-483c-887b-60e0f622a4e0" />
 
 ---
 
