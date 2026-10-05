@@ -1,119 +1,87 @@
-// src/pages/Services.jsx
+import { Link } from "react-router-dom";
 import SEO from "../components/SEO.jsx";
 
+const services = [
+  {
+    title: "Business Website Design & Development",
+    for: "Small businesses, service providers, organizations, and new brands that need a credible online presence.",
+    deliverables: ["Responsive website", "Contact or quote form", "SEO-ready page structure", "Deployment support"],
+  },
+  {
+    title: "Portfolio & Personal Brand Websites",
+    for: "Founders, creators, consultants, and professionals who need to present work clearly.",
+    deliverables: ["Project showcase", "About and profile content", "Inquiry workflow", "Fast mobile experience"],
+  },
+  {
+    title: "E-Commerce & Product Catalogues",
+    for: "Businesses that need to present products, collect enquiries, or prepare for online sales.",
+    deliverables: ["Product structure", "Searchable catalogue", "Inquiry or checkout planning", "Admin-friendly content model"],
+  },
+  {
+    title: "Web Applications, Dashboards & Portals",
+    for: "Teams that need custom workflows, secure data management, or internal tools.",
+    deliverables: ["React interface", "Node.js API", "Authentication and roles", "Database-backed admin workflows"],
+  },
+  {
+    title: "Website Redesign",
+    for: "Organizations with an existing website that needs better structure, performance, trust, or conversion.",
+    deliverables: ["Current-site review", "Information architecture", "Visual refresh", "Migration and launch checklist"],
+  },
+  {
+    title: "Maintenance & Support",
+    for: "Teams that want reliable updates after launch without hiring a full-time developer.",
+    deliverables: ["Bug fixes", "Content updates", "Security updates", "Small enhancements"],
+  },
+];
 
 export default function Services() {
   return (
-    <div className="screen" style={{ padding: 24 }}>
-      <div className="card" style={{ maxWidth: 1100, width: "100%" }}>
-        <SEO
-          title="Services - CeylonTech Labs"
-          description="From high-converting websites to custom dashboards and APIs, CeylonTech Labs helps you ship reliable digital products — fast."
-        />  
-        <h1 className="card__title">Our Services</h1>
-        <p className="card__sub">
-          From high-converting websites to custom dashboards and APIs, CeylonTech Labs
-          helps you ship reliable digital products — fast.
-        </p>
-
-        <div
-          style={{
-            marginTop: 24,
-            display: "grid",
-            gap: 18,
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-          }}
-        >
-          {/* Service 1 */}
-          <ServiceCard
-            title="Website Design & Development"
-            tagline="Launch a fast, modern site that works on every device."
-            items={[
-              "Custom design in your brand style",
-              "Responsive layout for desktop, tablet, and mobile",
-              "SEO basics and analytics integration",
-              "Contact forms, lead capture, and WhatsApp integration",
-            ]}
-          />
-
-          {/* Service 2 */}
-          <ServiceCard
-            title="Admin Dashboards & Portals"
-            tagline="See your data clearly and manage your business from one place."
-            items={[
-              "Secure login and role-based access",
-              "CRUD interfaces for content, products, and users",
-              "Charts and KPIs tailored to your metrics",
-              "Export to CSV/Excel and scheduled reports",
-            ]}
-          />
-
-          {/* Service 3 */}
-          <ServiceCard
-            title="APIs & System Integrations"
-            tagline="Connect your tools so your team spends less time copying data."
-            items={[
-              "RESTful APIs built with Node & Express",
-              "Integration with CRMs, payment gateways, and messaging",
-              "Webhooks and automation flows",
-              "Documentation for your developers and partners",
-            ]}
-          />
-
-          {/* Service 4 */}
-          <ServiceCard
-            title="Care & Ongoing Support"
-            tagline="We keep your product secure, updated, and evolving."
-            items={[
-              "Security updates and uptime monitoring",
-              "Content and minor feature updates each month",
-              "Backup and restore plan configuration",
-              "Performance tuning and A/B test support",
-            ]}
-          />
-        </div>
-
-        <div style={{ marginTop: 32 }}>
-          <p className="brand__tag">
-            Not sure which package you need? Start by telling us about your project —
-            we’ll recommend the right approach.
+    <>
+      <SEO
+        title="Services"
+        description="Website design, web application development, dashboards, redesigns, and maintenance from CeylonTech Labs."
+      />
+      <section className="page-hero">
+        <div className="container page-hero__inner">
+          <div className="kicker">Services</div>
+          <h1 className="page-title">Website services for businesses that need clarity and momentum.</h1>
+          <p className="lede">
+            Choose a focused website, a custom web application, or an ongoing support path.
+            Every engagement starts with the same question: what should this help your business do?
           </p>
-          <a href="/contact" className="btn" style={{ marginTop: 12 }}>
-            Talk to us about your project →
-          </a>
         </div>
-      </div>
-    </div>
-  );
-}
+      </section>
 
-function ServiceCard({ title, tagline, items }) {
-  return (
-    <div
-      className="card"
-      style={{
-        background: "rgba(15,23,42,0.9)",
-        border: "1px solid rgba(148,163,184,0.25)",
-        padding: 18,
-      }}
-    >
-      <h3 style={{ fontSize: 18, fontWeight: 700, marginBottom: 6 }}>{title}</h3>
-      <p
-        style={{
-          fontSize: 13,
-          color: "var(--muted-2)",
-          marginBottom: 10,
-        }}
-      >
-        {tagline}
-      </p>
-      <ul style={{ paddingLeft: 18, fontSize: 13, color: "var(--muted-2)" }}>
-        {items.map((it) => (
-          <li key={it} style={{ marginBottom: 4 }}>
-            {it}
-          </li>
-        ))}
-      </ul>
-    </div>
+      <section className="section" style={{ paddingTop: 24 }}>
+        <div className="container grid-2">
+          {services.map((service) => (
+            <article className="card" key={service.title}>
+              <h2 className="card__title">{service.title}</h2>
+              <p className="card__sub"><strong>Best for:</strong> {service.for}</p>
+              <ul className="list-clean">
+                {service.deliverables.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+              <Link to="/contact" className="btn btn--outline">Ask about this service</Link>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="cta-band">
+        <div className="container split">
+          <div>
+            <div className="kicker">Not sure where to start?</div>
+            <h2 className="page-title">A short brief is enough for the first conversation.</h2>
+          </div>
+          <div>
+            <p className="card__sub">
+              Send your project type, rough budget, timeline, and a few reference links.
+              CeylonTech Labs can help shape that into a practical scope.
+            </p>
+            <Link to="/contact" className="btn">Request a quote</Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

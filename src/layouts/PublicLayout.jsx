@@ -4,17 +4,9 @@ import Footer from "../components/Footer.jsx";
 
 export default function PublicLayout() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "#0B0D10",
-        color: "white",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <div className="site-shell">
       <Navbar />
-      <main style={{ flex: 1, paddingTop: 8 }}>
+      <main className="site-main">
         <Outlet />
       </main>
       <Footer />

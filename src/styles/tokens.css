@@ -1,12 +1,16 @@
 :root {
   --bg: #0B0D10;
   --surface: #121418;
+  --surface-2: #181b21;
   --text: #E6E7EB;
   --muted: #8B8F98;
   --muted-2: #B8BAC0;
   --accent: #E11D70;      /* magenta/pink */
   --accent-2: #F59E0B;    /* gradient end */
+  --accent-3: #22c55e;
   --ring: #A21CAF;        /* focus ring */
   --white-10: rgba(255,255,255,0.10);
   --white-15: rgba(255,255,255,0.15);
+  --border: rgba(148,163,184,0.18);
+  --container: 1160px;
 }

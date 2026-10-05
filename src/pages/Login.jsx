@@ -61,10 +61,6 @@ export default function Login() {
     }
   };
 
-  const handleGoogleError = (errorMessage) => {
-    setError(errorMessage);
-  };
-
   return (
     <div className="screen">
       <FloatingBits />

@@ -1,299 +1,168 @@
-// src/pages/Home.jsx
 import { Link } from "react-router-dom";
 import SEO from "../components/SEO.jsx";
 
+const services = [
+  ["Business websites", "Fast, responsive company sites with clear messaging, lead capture, and content that is easy to maintain."],
+  ["Web applications", "Custom React and Node.js tools for workflows that need more than a static website."],
+  ["Dashboards and portals", "Secure interfaces for managing leads, content, users, projects, and internal operations."],
+];
+
+const process = [
+  ["Discover", "Clarify goals, users, scope, constraints, and the content needed for launch."],
+  ["Design", "Create the page structure, interface direction, and key flows before build work begins."],
+  ["Build", "Develop the frontend, backend, integrations, and admin tooling in working increments."],
+  ["Launch", "Deploy, test, hand over the workflow, and plan practical support after release."],
+];
+
+const faqs = [
+  ["Can you redesign an existing website?", "Yes. The first step is reviewing the current site, content, analytics if available, and the business goals behind the redesign."],
+  ["Do you build admin panels?", "Yes. This project already uses React, Express, MySQL, authentication, and admin routes, which is the kind of stack CeylonTech Labs can maintain."],
+  ["Can we start without every detail finalized?", "Yes. A short discovery phase can turn rough ideas into a launch plan, content list, and phased scope."],
+  ["How do I request a quote?", "Use the contact form with your project type, budget range, timeline, and a few details. WhatsApp is available for quick first messages."],
+];
+
 export default function Home() {
   return (
-    <div className="screen" style={{ padding: 24 }}>
+    <>
       <SEO
-        title="Home"
-        description="CeylonTech Labs builds modern websites, dashboards, and custom systems in Sri Lanka for clients worldwide."
+        title="Website Services Company"
+        description="CeylonTech Labs designs and builds modern websites, web applications, dashboards, and support workflows for Sri Lankan and international clients."
       />
-
-      <div
-        className="card"
-        style={{
-          maxWidth: 1100,
-          width: "100%",
-          padding: 32,
-          display: "grid",
-          gap: 32,
-          gridTemplateColumns: "minmax(0, 1.4fr) minmax(0, 1fr)",
-          alignItems: "center",
-        }}
-      >
-        {/* Hero left */}
-        <div>
-          <div
-            style={{
-              fontSize: 13,
-              color: "var(--muted)",
-              marginBottom: 8,
-            }}
-          >
-            Web & System Engineering · Sri Lanka
-          </div>
-          <h1
-            className="brand__title"
-            style={{
-              fontSize: 40,
-              lineHeight: 1.1,
-              marginBottom: 8,
-            }}
-          >
-            Digital products that feel{" "}
-            <span style={{ color: "#EC4899" }}>fast</span>,{" "}
-            <span style={{ color: "#F97316" }}>polished</span>, and{" "}
-            <span style={{ color: "#22c55e" }}>reliable</span>.
-          </h1>
-          <p
-            className="brand__tag"
-            style={{ maxWidth: 520, marginBottom: 16 }}
-          >
-            CeylonTech Labs designs and builds modern websites, admin
-            dashboards, and custom systems using React, Node & MySQL —
-            from Sri Lanka to the world.
-          </p>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              marginBottom: 18,
-            }}
-          >
-            <Link to="/contact" className="btn">
-              Start a project →
-            </Link>
-            <Link
-              to="/portfolio"
-              className="btn btn--outline"
-              style={{ fontSize: 13 }}
-            >
-              View recent work
-            </Link>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 12,
-              fontSize: 12,
-              color: "var(--muted)",
-            }}
-          >
-            <TechPill>React</TechPill>
-            <TechPill>Node & Express</TechPill>
-            <TechPill>MySQL</TechPill>
-            <TechPill>REST APIs</TechPill>
-          </div>
-        </div>
-
-        {/* Hero right - quick stats / highlights */}
-        <div
-          className="card"
-          style={{
-            background:
-              "radial-gradient(circle at top left, rgba(236,72,153,0.25), transparent 60%), #020617",
-            border: "1px solid rgba(148,163,184,0.35)",
-            padding: 20,
-          }}
-        >
-          <h2
-            style={{
-              fontSize: 16,
-              fontWeight: 700,
-              marginBottom: 8,
-            }}
-          >
-            Why teams work with us
-          </h2>
-          <ul
-            style={{
-              fontSize: 13,
-              color: "var(--muted-2)",
-              paddingLeft: 18,
-              marginBottom: 12,
-            }}
-          >
-            <li>Small, focused team — you work directly with the builders.</li>
-            <li>Clean admin dashboards, not just pretty landing pages.</li>
-            <li>Clear communication, milestones, and deployment support.</li>
-          </ul>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
-              gap: 10,
-              marginTop: 8,
-            }}
-          >
-            <Stat label="Projects shipped" value="20+" />
-            <Stat label="Tech stack" value="React · Node" />
-            <Stat label="Timezone" value="GMT+5:30" />
-          </div>
-        </div>
-      </div>
-
-      {/* Services preview */}
-      <section
-        className="card"
-        style={{
-          maxWidth: 1100,
-          width: "100%",
-          marginTop: 24,
-          padding: 24,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            gap: 12,
-            flexWrap: "wrap",
-            marginBottom: 16,
-          }}
-        >
+      <section className="hero">
+        <div className="container hero__grid">
           <div>
-            <h2 style={{ fontSize: 20, fontWeight: 700 }}>What we build</h2>
-            <p
-              style={{
-                fontSize: 13,
-                color: "var(--muted-2)",
-              }}
-            >
-              From marketing sites to internal dashboards, we turn your ideas
-              into maintainable, production-ready software.
+            <div className="eyebrow">CeylonTech Labs</div>
+            <h1 className="title-xl">Websites and systems built for serious business work.</h1>
+            <p className="lede">
+              We design and develop polished business websites, custom web applications, and
+              secure dashboards for organizations that need a dependable digital partner.
+            </p>
+            <div className="actions">
+              <Link to="/contact" className="btn">Request a quote</Link>
+              <Link to="/services" className="btn btn--outline">Explore services</Link>
+            </div>
+            <div className="pill-row" style={{ marginTop: 24 }}>
+              <span className="pill">React</span>
+              <span className="pill">Node.js</span>
+              <span className="pill">MySQL</span>
+              <span className="pill">Responsive UI</span>
+            </div>
+          </div>
+
+          <div className="hero__media" aria-label="Website project preview">
+            <div className="hero__media-top"><span className="dot" /><span className="dot" /><span className="dot" /></div>
+            <div className="hero__panel">
+              <div className="mock-row">
+                <div className="mock-chip">Brief</div>
+                <div><div className="mock-line" /><div className="mock-line" /></div>
+              </div>
+              <div className="mock-row">
+                <div className="mock-chip">Design</div>
+                <div><div className="mock-line" /><div className="mock-line" /></div>
+              </div>
+              <div className="mock-row">
+                <div className="mock-chip">Build</div>
+                <div><div className="mock-line" /><div className="mock-line" /></div>
+              </div>
+              <div className="card" style={{ background: "rgba(11,13,16,.7)" }}>
+                <strong>Production-ready delivery</strong>
+                <p className="card__sub" style={{ marginBottom: 0 }}>
+                  Clear pages, working forms, admin protection, SEO basics, and support paths.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div className="kicker">Services</div>
+            <h2>Practical digital products, not decorative pages.</h2>
+            <p>
+              CeylonTech Labs focuses on websites and web systems that explain your offer,
+              capture enquiries, and give your team a reliable way to manage the work behind them.
             </p>
           </div>
-          <Link
-            to="/services"
-            className="btn btn--outline"
-            style={{ alignSelf: "flex-end", fontSize: 13 }}
-          >
-            View all services →
-          </Link>
-        </div>
-
-        <div
-          style={{
-            display: "grid",
-            gap: 16,
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          }}
-        >
-          <HomeService
-            title="Websites that convert"
-            text="Modern, responsive, and fast-loading sites that make your brand look trustworthy and professional."
-          />
-          <HomeService
-            title="Admin dashboards"
-            text="See leads, content, and operations clearly through custom dashboards built for your team."
-          />
-          <HomeService
-            title="Custom systems & APIs"
-            text="Connect tools, automate manual work, and expose clean APIs for your partners and apps."
-          />
+          <div className="grid-3">
+            {services.map(([title, text]) => (
+              <article className="card" key={title}>
+                <h3 className="card__title">{title}</h3>
+                <p className="card__sub">{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* CTA strip */}
-      <section
-        className="card"
-        style={{
-          maxWidth: 1100,
-          width: "100%",
-          marginTop: 24,
-          padding: 24,
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-          gap: 12,
-          alignItems: "center",
-        }}
-      >
-        <div>
-          <h2 style={{ fontSize: 18, fontWeight: 700 }}>
-            Ready to start something?
-          </h2>
-          <p
-            style={{
-              fontSize: 13,
-              color: "var(--muted-2)",
-            }}
-          >
-            Share a bit about your idea and we’ll send back a simple plan and
-            quote — no hard sell.
-          </p>
-        </div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          <Link to="/contact" className="btn">
-            Contact us today →
-          </Link>
-          <Link to="/portfolio" className="btn btn--outline">
-            See our work
-          </Link>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="container split">
+          <div className="section-heading">
+            <div className="kicker">Process</div>
+            <h2>A calm path from idea to launch.</h2>
+            <p>
+              Every project needs a scope that matches the business, not a one-size package.
+              The workflow keeps decisions visible and avoids vague handovers.
+            </p>
+            <Link to="/contact" className="btn">Discuss a project</Link>
+          </div>
+          <div className="grid-2">
+            {process.map(([title, text]) => (
+              <article className="card" key={title}>
+                <div className="eyebrow">{title}</div>
+                <p className="card__sub">{text}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-    </div>
-  );
-}
 
-function TechPill({ children }) {
-  return (
-    <span
-      style={{
-        padding: "4px 10px",
-        borderRadius: 999,
-        border: "1px solid rgba(148,163,184,0.4)",
-      }}
-    >
-      {children}
-    </span>
-  );
-}
+      <section className="cta-band">
+        <div className="container split">
+          <div>
+            <div className="kicker">Why CeylonTech Labs</div>
+            <h2 className="page-title">Focused engineering with a polished client experience.</h2>
+          </div>
+          <div className="grid-2">
+            <div className="card"><strong>Clear communication</strong><p className="card__sub">Milestones, priorities, and launch requirements stay visible from the start.</p></div>
+            <div className="card"><strong>Full-stack delivery</strong><p className="card__sub">Frontend, backend, forms, content workflows, and deployment support can be handled together.</p></div>
+          </div>
+        </div>
+      </section>
 
-function Stat({ label, value }) {
-  return (
-    <div
-      className="card"
-      style={{
-        padding: 12,
-        background: "rgba(15,23,42,0.9)",
-        border: "1px solid rgba(148,163,184,0.35)",
-      }}
-    >
-      <div
-        style={{
-          fontSize: 12,
-          color: "var(--muted-2)",
-          marginBottom: 2,
-        }}
-      >
-        {label}
-      </div>
-      <div style={{ fontSize: 16, fontWeight: 700 }}>{value}</div>
-    </div>
-  );
-}
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div className="kicker">Questions</div>
+            <h2>Before we start.</h2>
+          </div>
+          <div className="grid-2">
+            {faqs.map(([question, answer]) => (
+              <article className="card" key={question}>
+                <h3 className="card__title">{question}</h3>
+                <p className="card__sub">{answer}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-function HomeService({ title, text }) {
-  return (
-    <div
-      className="card card-link"
-      style={{
-        background: "rgba(15,23,42,0.9)",
-        border: "1px solid rgba(148,163,184,0.25)",
-        padding: 16,
-      }}
-    >
-      <div style={{ fontSize: 14, fontWeight: 600, marginBottom: 4 }}>
-        {title}
-      </div>
-      <div style={{ fontSize: 13, color: "var(--muted-2)" }}>{text}</div>
-    </div>
+      <section className="section--tight">
+        <div className="container card split">
+          <div>
+            <div className="kicker">Ready when you are</div>
+            <h2 className="page-title">Tell us what you need to build.</h2>
+          </div>
+          <div>
+            <p className="card__sub">
+              Share your goals, timeline, and budget range. We will reply with the next
+              practical step instead of a generic sales pitch.
+            </p>
+            <Link to="/contact" className="btn">Start the quote request</Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

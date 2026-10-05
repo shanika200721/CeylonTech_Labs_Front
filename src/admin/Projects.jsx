@@ -20,13 +20,13 @@ export default function Projects() {
   };
 
   const [form, setForm] = useState(emptyForm);
-  const [editing, setEditing] = useState(null);
+  const [, setEditing] = useState(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [debugInfo, setDebugInfo] = useState("");
 
-  const [page, setPage] = useState(1);
+  const [, setPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState("");
 
   // Load projects
@@ -196,15 +196,6 @@ export default function Projects() {
     setError("");
     setSuccess("");
     setDebugInfo(`Editing project ID: ${project.id}`);
-  };
-
-  // Cancel edit
-  const cancelEdit = () => {
-    setEditing(null);
-    setForm(emptyForm);
-    setError("");
-    setSuccess("");
-    setDebugInfo("");
   };
 
   // Delete project

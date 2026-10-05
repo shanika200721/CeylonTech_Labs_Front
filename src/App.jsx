@@ -23,9 +23,7 @@ import PostView from "./pages/PostView.jsx";
 import RequestReset from "./pages/RequestReset.jsx";
 import ResetPassword from "./pages/ResetPassword.jsx";
 
-import TestMarkdown from "./test-markdown.jsx"; 
 import Services from "./pages/Services.jsx";
-import Pricing from "./pages/Pricing.jsx";
 import About from "./pages/About.jsx";
 import Home from "./pages/Home.jsx";
 
@@ -52,9 +50,6 @@ export default function App() {
 
           <Route path="/contact" element={<Contact />} />
 
-          {/* Markdown test page */}
-          <Route path="/test-md" element={<TestMarkdown />} />
-
           {/* Login */}
           <Route path="/login" element={<Login />} />
 
@@ -63,10 +58,6 @@ export default function App() {
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/services" element={<Services />} />
 
-          {/*
-          <Route path="/pricing" element={<Pricing />} />
-          */}
-          
           <Route path="/about" element={<About />} />
 
           
